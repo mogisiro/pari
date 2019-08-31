@@ -1,0 +1,172 @@
+*{
+  font-family: '나눔고딕';
+}
+
+html, body, main, section {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.upperbar>ul {
+  display: flex;
+}
+
+.content {
+  display: flex;
+}
+nav {
+  flex-direction: column;
+  background: #22b8cf;
+  color: white;
+  display: flex;
+  width: 400px;   
+  height: 100%;
+  font-size: 18px;
+  line-height: 2.0em;
+  margin-left: -10px;
+  padding-top: 0em;
+  margin-top: -10px;
+}
+ul {
+  list-style: none;
+}
+
+@media (min-width: 1000px){
+  .upperbar, header{
+      display: none;
+  }
+}
+
+@media (max-width: 1000px){
+  nav {
+      display: none;
+  } 
+
+}
+
+@media (min-width: 700px) {
+  #latest, #popular, #qna{
+      border: 1px solid ghostwhite; 
+      background: ghostwhite;
+      color: dimgray;
+      padding-top: 20px;
+      padding-left: 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      width: 350px;
+  }
+  
+  #latest{
+      position: relative;
+      top: 30px;
+      left: 30px;
+      height: 650px;
+  }
+  
+  #popular {
+      position: relative;
+      left: 420px;
+      bottom: 640px;
+      height: 200px;
+  }
+  
+  #qna {
+      position: relative;
+      left: 420px;
+      bottom: 630px;
+      height: 200px;
+  }
+  
+  .majors {
+      position: relative;
+      bottom: 620px;
+      left: 420px;
+      border-radius: 10px;
+  }
+  
+  #softWare, #CE, #BD, #AI {
+      padding-top: 40px;
+      text-align: center;
+      border: 1px solid lightcyan;
+      background: lightcyan;
+      width: 182px;
+      height: 60px;
+      position: relative;
+      font-weight: bold;
+      color: dimgray;
+  }
+  
+  #CE {
+      left: 190px;
+      bottom: 102px;
+  }
+  
+  #AI {
+      bottom: 98px;
+  }
+  
+  #BD {
+      bottom: 199px;
+      left: 190px;
+  }
+}
+@media (max-width: 700px){
+  nav{
+      display: none;
+  } 
+  .majors {
+      display: none;
+  }
+  #latest, #popular, #qna{
+      border: 1px solid ghostwhite; 
+      background: ghostwhite;
+      color: dimgray;
+      padding-top: 20px;
+      padding-left: 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      width: 90%;
+      margin: 0 auto;
+      margin-top: 3%;
+      height: 200px;
+  }
+}
+
+.upperbar{
+  display: flex;
+  flex-direction: row;
+  color: white;
+  font-size: 18px;
+  font-weight: solid;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+header {
+  background: #22b8cf; 
+  width: auto;
+  margin-left: -10px;
+  margin-top: -10px;
+  height: 75px;
+}
+
+/*.upperbar li ul {
+  display: none; 
+  height:auto;
+  border:1px solid lightcyan;
+  position: absolute;
+  color: dimgray;
+  line-height: 2.3em;
+  background-color: lightcyan;
+  padding-right: 2em;
+}
+
+.upperbar li:hover ul {
+  display:block; 
+}*/
+  
