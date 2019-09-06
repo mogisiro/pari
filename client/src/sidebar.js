@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.css';
 
 export class Sidebar extends React.Component {
@@ -7,7 +6,7 @@ export class Sidebar extends React.Component {
         return(
             <nav>
                 <ul>
-                    <h4>로그인</h4>
+                    <h4><a href="login.js">로그인</a></h4>
                         <h3>커뮤니티</h3>
                         <li>자유게시판</li>
                         <li>Q&A</li>
@@ -27,4 +26,3 @@ export class Sidebar extends React.Component {
         )
     }
 }
-ReactDOM.render(<Sidebar/>, document.getElementById('root'));

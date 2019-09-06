@@ -2,6 +2,10 @@
   font-family: '나눔고딕';
 }
 
+a:link { color: white; text-decoration: none;}
+a:visited { color: white; text-decoration: none;}
+a:hover { color: dimgray; text-decoration: none;}
+
 html, body, main, section {
   height: 100%;
   width: 100%;
@@ -144,7 +148,9 @@ ul {
   font-size: 18px;
   font-weight: solid;
   justify-content: space-around;
-  padding-top: 20px;
+  padding-right: 40px;
+  padding-top: 10px;
+  cursor: pointer;
 }
 
 header {
@@ -155,18 +161,41 @@ header {
   height: 75px;
 }
 
-/*.upperbar li ul {
-  display: none; 
-  height:auto;
-  border:1px solid lightcyan;
-  position: absolute;
-  color: dimgray;
-  line-height: 2.3em;
-  background-color: lightcyan;
-  padding-right: 2em;
+.menuItem{
+  margin-left: -10px;
+  margin-right: -10px;
 }
 
-.upperbar li:hover ul {
-  display:block; 
-}*/
+.submenu {
+  height: auto;
+  width: 80%;
+  background: #22b8cf; 
+  color: white;
+  position: relative;
+  z-index: 1;
+  top: 25px;
+  line-height: 2.5em;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.slide-enter {
+  opacity: 0.01;
+}
+
+.slide-enter.slide-enter-active {
+  opacity: 1;
+  transition: opacity 100ms ease-in;
+}
+
+.slide-leave {
+  opacity: 1;
+}
+
+.slide-leave.slide-leave-active {
+  opacity: 0.01;
+  transition: opacity 100ms ease-in;
+}
+
+
   

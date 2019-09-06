@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {MenuTmp} from './menuTmp.js';
+import {Menu} from './menu.js'
+//import {Menu1, Menu2, Menu3, MenuLogin, MenuLogo} from './menu.js';
 import {Sidebar} from './sidebar.js';
 import {MainPage} from './mainPage.js';
 
@@ -10,14 +11,14 @@ class Template extends React.Component{
         return (
             <div className='container'>
                 <header>
-                    <MenuTmp/>; 
+                   <Menu/>
                 </header>
                 <section className='content'>
                     <nav>
-                        <Sidebar/>;
+                        <Sidebar/>
                     </nav>
                     <main>
-                        <MainPage/>;
+                        <MainPage/>
                     </main>
                 </section>
                 <footer>

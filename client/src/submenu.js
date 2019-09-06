@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.css';
 
 export class SubmenuForCommunity extends React.Component{
@@ -7,13 +6,13 @@ export class SubmenuForCommunity extends React.Component{
         return (
             <ul className='submenu'>
                 <li className='submenu-item'>
-                    <a>자유게시판</a>
+                    자유게시판
                 </li>
                 <li className='submenu-item'>
-                    <a>Q&A</a>
+                    Q&A
                 </li>
                 <li className='submenu-item'>
-                    <a>스터디/프로젝트</a>
+                    스터디/프로젝트
                 </li>
             </ul>
         )
@@ -25,16 +24,16 @@ export class SubmenuForInfo extends React.Component{
         return (
             <ul className='submenu'>
                 <li className='submenu-item'>
-                    <a>수업 후기</a>
+                    수업 후기
                 </li>
                 <li className='submenu-item'>
-                    <a>프로그램 후기</a>
+                    프로그램 후기
                 </li>
                 <li className='submenu-item'>
-                    <a>족보</a>
+                    족보
                 </li>
                 <li className='submenu-item'>
-                    <a>개발</a>
+                    개발
                 </li>
             </ul>
         )
@@ -46,22 +45,18 @@ export class SubmenuForMajors extends React.Component{
         return (
             <ul className='submenu'>
                 <li className='submenu-item'>
-                    <a>융소</a>
+                    융소
                 </li>
                 <li className='submenu-item'>
-                    <a>컴공</a>
+                    컴공
                 </li>
                 <li className='submenu-item'>
-                    <a>빅데이터</a>
+                    빅데이터
                 </li>
                 <li className='submenu-item'>
-                    <a>인공지능</a>
+                    인공지능
                 </li>
             </ul>
         )
     }
 }
-
-ReactDOM.render(<SubmenuForCommunity/>, document.getElementById('root'));
-ReactDOM.render(<SubmenuForInfo/>, document.getElementById('root'));
-ReactDOM.render(<SubmenuForMajors/>, document.getElementById('root'));
