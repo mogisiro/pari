@@ -19,20 +19,32 @@ export class Menu extends React.Component {
     }
     toggleMenu1(){
         let menuState = !this.state.commuActive;
-        this.setState({commuActive: menuState});
+        this.setState({
+            commuActive: menuState,
+            infoActive: false,
+            majorActive: false  
+        });
     }
     toggleMenu2(){
         let menuState = !this.state.infoActive;
-        this.setState({infoActive: menuState});
+        this.setState({
+            commuActive: false,
+            infoActive: menuState,
+            majorActive: false  
+        });
     }
     toggleMenu3(){
         let menuState = !this.state.majorActive;
-        this.setState({majorActive: menuState});
+        this.setState({
+            commuActive: false,
+            infoActive: false,
+            majorActive: menuState  
+        });
     }
     render(){
         return (
             <ul className='upperbar'>
-                <li className='menuItem' onClick={this.toggleMenu1}>
+                <li className='menuItem' id='commu' onClick={this.toggleMenu1}>
                     커뮤니티
                         <ReactCSSTransitionGroup
                             transitionName="slide"

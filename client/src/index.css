@@ -153,6 +153,8 @@ ul {
   cursor: pointer;
 }
 
+
+
 header {
   background: #22b8cf; 
   width: auto;
@@ -161,23 +163,21 @@ header {
   height: 75px;
 }
 
-.menuItem{
-  margin-left: -10px;
-  margin-right: -10px;
-}
-
 .submenu {
   height: auto;
-  width: 80%;
+  width: 25%;
   background: #22b8cf; 
   color: white;
-  position: relative;
+  position: absolute;
   z-index: 1;
-  top: 25px;
+  top: 70px;
   line-height: 2.5em;
-  padding-right: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
   padding-bottom: 10px;
+  font-size: 16px;
 }
+
 
 .slide-enter {
   opacity: 0.01;
@@ -196,6 +196,4 @@ header {
   opacity: 0.01;
   transition: opacity 100ms ease-in;
 }
-
-
   
