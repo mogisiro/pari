@@ -4,6 +4,7 @@ import {SubmenuForCommunity} from './submenu.js';
 import {SubmenuForInfo} from './submenu.js';
 import {SubmenuForMajors} from './submenu.js';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { zip } from 'rxjs';
 
 export class Menu extends React.Component {
     constructor(props){
@@ -11,10 +12,11 @@ export class Menu extends React.Component {
         this.toggleMenu1 = this.toggleMenu1.bind(this);
         this.toggleMenu2 = this.toggleMenu2.bind(this);
         this.toggleMenu3 = this.toggleMenu3.bind(this);
+        this.changeCSS1 = this.changeCSS1.bind(this);
         this.state ={ 
             commuActive: false,
             infoActive: false,
-            majorActive: false    
+            majorActive: false, 
         };
     }
     toggleMenu1(){
@@ -22,7 +24,7 @@ export class Menu extends React.Component {
         this.setState({
             commuActive: menuState,
             infoActive: false,
-            majorActive: false  
+            majorActive: false,   
         });
     }
     toggleMenu2(){
@@ -30,7 +32,7 @@ export class Menu extends React.Component {
         this.setState({
             commuActive: false,
             infoActive: menuState,
-            majorActive: false  
+            majorActive: false,
         });
     }
     toggleMenu3(){
@@ -38,13 +40,38 @@ export class Menu extends React.Component {
         this.setState({
             commuActive: false,
             infoActive: false,
-            majorActive: menuState  
+            majorActive: menuState,
         });
     }
+    changeCSS1(){
+        let x = document.getElementById('commu');
+        let y = document.getElementById('info');
+        let z = document.getElementById('major');
+        if (!this.state.commuActive) x.style.color = "dimgray";
+        else x.style.color = "white";
+        y.style.color = z.style.color = "white";
+    }
+    changeCSS2(){
+        let x = document.getElementById('commu');
+        let y = document.getElementById('info');
+        let z = document.getElementById('major');
+        if (!this.state.infoActive) y.style.color = "dimgray";
+        else y.style.color = "white";
+        x.style.color = z.style.color = "white";
+    }
+    changeCSS3(){
+        let x = document.getElementById('commu');
+        let y = document.getElementById('info');
+        let z = document.getElementById('major');
+        if (!this.state.majorActive) z.style.color = "dimgray";
+        else z.style.color = "white";
+        y.style.color = x.style.color = "white";
+    }
+
     render(){
         return (
             <ul className='upperbar'>
-                <li className='menuItem' id='commu' onClick={this.toggleMenu1}>
+                <li className='menuItem' id='commu' onClick={(event)=>{this.toggleMenu1(); this.changeCSS1();}}>
                     커뮤니티
                         <ReactCSSTransitionGroup
                             transitionName="slide"
@@ -53,7 +80,7 @@ export class Menu extends React.Component {
                             {this.state.commuActive && <SubmenuForCommunity /> }
                         </ReactCSSTransitionGroup>
                 </li>
-                <li className='menuItem' onClick={this.toggleMenu2}>
+                <li className='menuItem' id='info' onClick={(event)=>{this.toggleMenu2(); this.changeCSS2();}}>
                     정보
                         <ReactCSSTransitionGroup
                             transitionName="slide"
@@ -62,7 +89,7 @@ export class Menu extends React.Component {
                             { this.state.infoActive && <SubmenuForInfo /> }
                         </ReactCSSTransitionGroup>
                 </li>
-                <li className='menuItem' onClick={this.toggleMenu3}>
+                <li className='menuItem' id='major' onClick={(event)=>{this.toggleMenu3(); this.changeCSS3();}}>
                     전공
                         <ReactCSSTransitionGroup
                             transitionName="slide"
