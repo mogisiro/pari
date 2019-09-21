@@ -1,8 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.css';
 
-export class MainPage extends React.Component {
+export class MainPage extends React.Component{
     render(){
         return (
             <main>

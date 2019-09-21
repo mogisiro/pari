@@ -1,0 +1,13 @@
+* {
+    font-family: '나눔고딕';
+}
+
+a:link { color: white; text-decoration: none;}
+a:visited { color: white; text-decoration: none;}
+a:hover { color: dimgray; text-decoration: none;}
+
+@media (min-width: 1000px) {
+    #loginTemplate {
+        margin-left: 420px;
+    }
+}

@@ -25,10 +25,11 @@ html, body, main, section {
 }
 nav {
   flex-direction: column;
+  position: fixed;
   background: #22b8cf;
   color: white;
   display: flex;
-  width: 400px;   
+  width: 370px;   
   height: 100%;
   font-size: 18px;
   line-height: 2.0em;
@@ -63,25 +64,26 @@ ul {
       border-radius: 5px;
       font-weight: bold;
       width: 350px;
+      box-shadow: 1px 1px 0.5px gainsboro;
   }
   
   #latest{
       position: relative;
       top: 30px;
-      left: 30px;
+      left: 430px;
       height: 650px;
   }
   
   #popular {
       position: relative;
-      left: 420px;
+      left: 820px;
       bottom: 640px;
       height: 200px;
   }
   
   #qna {
       position: relative;
-      left: 420px;
+      left: 820px;
       bottom: 630px;
       height: 200px;
   }
@@ -89,7 +91,7 @@ ul {
   .majors {
       position: relative;
       bottom: 620px;
-      left: 420px;
+      left: 820px;
       border-radius: 10px;
   }
   
@@ -103,6 +105,7 @@ ul {
       position: relative;
       font-weight: bold;
       color: dimgray;
+      box-shadow: 1px 1px 0.5px gainsboro;
   }
   
   #CE {
@@ -119,6 +122,7 @@ ul {
       left: 190px;
   }
 }
+
 @media (max-width: 700px){
   nav{
       display: none;
@@ -135,9 +139,9 @@ ul {
       border-radius: 5px;
       font-weight: bold;
       width: 90%;
-      margin: 0 auto;
-      margin-top: 3%;
-      height: 200px;
+      margin: 3% 1%;
+      height: 220px;
+      box-shadow: 1px 1px 0.5px gainsboro;
   }
 }
 
@@ -152,8 +156,6 @@ ul {
   padding-top: 10px;
   cursor: pointer;
 }
-
-
 
 header {
   background: #22b8cf; 

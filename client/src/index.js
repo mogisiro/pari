@@ -1,30 +1,35 @@
 import React from 'react';
-import {Route} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import './index.css';
 import {Menu} from './menu.js'
 import {Sidebar} from './sidebar.js';
 import {MainPage} from './mainPage.js';
-import {Login} from './login.js';
+import SignIn from './signIn.js';
 
 class Template extends React.Component{
     render(){
         return (
-            <div className='container'>
-                <header>
-                   <Menu/>
-                </header>
-                <section className='content'>
-                    <nav>
-                        <Sidebar/>
-                    </nav>
-                    <main>
-                        <MainPage/>
-                    </main>
-                </section>
-                <footer>
-                </footer>
-            </div>
+            <Router>
+                <div className='container'>
+                    <header>
+                        <Menu/>
+                    </header>
+                    <section className='content'>
+                        <nav>
+                            <Sidebar/>
+                        </nav>
+                        <main>
+                            <Switch>
+                                <Route path="/" exact component={MainPage}/>
+                                <Route path="/login" component={SignIn}/>
+                            </Switch>
+                        </main>
+                    </section>
+                    <footer>
+                    </footer>
+                </div>
+            </Router>
         )
     }
 }
