@@ -3,12 +3,13 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
+import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import './signIn.css';
+import {Link as RouterLink} from 'react-router-dom';
+import './signIn&Up.css';
 
 const useStyles = makeStyles(theme => ({
   '@global': {
@@ -24,20 +25,19 @@ const useStyles = makeStyles(theme => ({
     border: '1px solid lightgray',
     borderRadius: '5px',
     paddingTop: "20px",
-    paddingBottom: '50px'
+    paddingBottom: '30px'
   },
   form: {
     width: '80%', // Fix IE 11 issue.
     marginTop: theme.spacing(1),
   },
-  submit: {
+  button: {
     margin: theme.spacing(3, 0, 2),
     backgroundColor: "#22b8cf",
-    color: "white"
+    color: "white",
+    height: "52px",
+    fontSize: "17px"
   },
-  grid: {
-      cursor: "pointer"
-  }
 }));
 
 export default function SignIn() {
@@ -55,7 +55,7 @@ export default function SignIn() {
             margin="normal"
             required
             fullWidth
-            id="username"
+            id="userName"
             label="아이디"
             name="username"
             autoComplete="아이디"
@@ -69,7 +69,7 @@ export default function SignIn() {
             name="password"
             label="비밀번호"
             type="password"
-            id="password"
+            id="passWord"
             autoComplete="current-password"
           />
           <FormControlLabel
@@ -81,19 +81,26 @@ export default function SignIn() {
             fullWidth
             variant="contained"
             size="large"
-            className={classes.submit}
+            className={classes.button}
+            style={{marginBottom: "5px"}}
           >
             로그인
           </Button>
+          <Link component={RouterLink} to="/register" underline="none">
+            <Button
+            fullWidth
+            variant="contained"
+            size="large"
+            className={classes.button}
+            style={{marginTop: "10px"}}
+          >
+               회원가입
+            </Button>
+          </Link> 
           <Grid container>
             <Grid item xs>
-              <Link to="#" variant="body1" color="dimgray" className={classes.grid}>
+              <Link href="#" variant="body1" color="dimgray">
                 비밀번호 찾기
-              </Link>
-            </Grid>
-            <Grid item>
-              <Link to="#" variant="body1" color="dimgray" className={classes.grid}>
-                회원가입
               </Link>
             </Grid>
           </Grid>

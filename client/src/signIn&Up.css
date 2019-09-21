@@ -1,0 +1,9 @@
+* {
+    font-family: '나눔고딕';
+}
+
+@media (min-width: 1000px) {
+    #loginTemplate, #registerTemplate {
+        margin-left: 420px;
+    }
+}
