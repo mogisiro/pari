@@ -1,16 +1,16 @@
 import React from 'react';
-import './index.css';
+import './app.css';
 
 export class MainPage extends React.Component{
     render(){
         return (
-            <main>
+            <main className>
                 <section className='shortcuts'>
                     <div id='latest'>최신글</div>
                     <div id='popular'>인기글</div>
                     <div id='qna'>Q&A</div>
                 </section>
-                    <section className='majors'>
+                <section className='majors'>
                     <div id='softWare'>융소</div>
                     <div id='CE'>컴공(복전)</div>
                     <div id='AI'>인공지능</div>

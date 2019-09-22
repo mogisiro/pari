@@ -10,6 +10,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import {Link as RouterLink} from 'react-router-dom';
 import './signIn&Up.css';
+import {useSelector, useDispatch} from 'react-redux';
+import {login} from './actions/isLogged.js';
 
 const useStyles = makeStyles(theme => ({
   '@global': {
@@ -42,7 +44,8 @@ const useStyles = makeStyles(theme => ({
 
 export default function SignIn() {
   const classes = useStyles();
-
+  const isLogged = useSelector(state => state.isLogged);
+  const dispatch = useDispatch();
   return (
     <Container component="main" maxWidth="xs" id="loginTemplate">
       <div className={classes.paper}>

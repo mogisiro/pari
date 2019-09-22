@@ -41,20 +41,20 @@ ul {
   list-style: none;
 }
 
-@media (min-width: 1000px){
+@media (min-width: 800px){
   .upperbar, header{
       display: none;
   }
 }
 
-@media (max-width: 1000px){
+@media (max-width: 800px){
   nav {
       display: none;
   } 
 
 }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   #latest, #popular, #qna{
       border: 1px solid ghostwhite; 
       background: ghostwhite;
@@ -68,30 +68,30 @@ ul {
   }
   
   #latest{
-      position: relative;
+      position: fixed;
       top: 30px;
-      left: 430px;
+      margin-left: 400px;
       height: 650px;
   }
   
   #popular {
-      position: relative;
-      left: 820px;
-      bottom: 640px;
+      position: fixed;
+      left: 800px;
+      top: 30px;
       height: 200px;
   }
   
   #qna {
-      position: relative;
-      left: 820px;
-      bottom: 630px;
+      position: fixed;
+      left: 800px;
+      top: 260px;
       height: 200px;
   }
   
   .majors {
-      position: relative;
-      bottom: 620px;
-      left: 820px;
+      position: fixed;
+      left: 800px;
+      top: 490px;
       border-radius: 10px;
   }
   
@@ -123,7 +123,7 @@ ul {
   }
 }
 
-@media (max-width: 700px){
+@media (max-width: 800px){
   nav{
       display: none;
   } 
@@ -139,7 +139,7 @@ ul {
       border-radius: 5px;
       font-weight: bold;
       width: 90%;
-      margin: 3% 1%;
+      margin: 3% 2.5%;
       height: 220px;
       box-shadow: 1px 1px 0.5px gainsboro;
   }
@@ -198,4 +198,3 @@ header {
   opacity: 0.01;
   transition: opacity 100ms ease-in;
 }
-  

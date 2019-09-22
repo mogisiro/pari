@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     borderRadius: '5px',
     paddingTop: "20px",
     paddingBottom: '20px',
-    marginTop: '50px'
+    marginTop: '50px',
   },
   form: {
     width: '80%', // Fix IE 11 issue.
@@ -39,7 +39,8 @@ export default function SignUp() {
   const classes = useStyles();
 
   return (
-    <Container component="main" maxWidth="xs" id="registerTemplate">
+    <Container component="main" maxWidth="xs" id="registerTemplate"
+    >
       <div className={classes.paper}>
         <Typography component="h1" variant="h5">
           회원가입
@@ -67,7 +68,7 @@ export default function SignUp() {
                 label="비밀번호"
                 type="password"
                 name="passwd"
-                autoComplete="lname"
+                autoComplete="password"
               />
             </Grid>
             <Typography variant="body1"><p>학교 메일 인증</p></Typography>

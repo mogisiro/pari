@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css';
+import './app.css';
 import {SubmenuForCommunity} from './submenu.js';
 import {SubmenuForInfo} from './submenu.js';
 import {SubmenuForMajors} from './submenu.js';
@@ -67,7 +67,6 @@ export class Menu extends React.Component {
         else z.style.color = "white";
         y.style.color = x.style.color = "white";
     }
-
     render(){
         return (
             <ul className='upperbar'>
