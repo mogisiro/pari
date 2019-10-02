@@ -5,6 +5,7 @@ import {SubmenuForInfo} from './submenu.js';
 import {SubmenuForMajors} from './submenu.js';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import {Link} from 'react-router-dom';
+import {useSelector} from 'react-redux';
 
 export class Menu extends React.Component {
     constructor(props){
@@ -97,12 +98,12 @@ export class Menu extends React.Component {
                             { this.state.majorActive && <SubmenuForMajors /> }
                         </ReactCSSTransitionGroup>
                 </li>
-                <Link to="/login">
-                    <li className='menuItem'>로그인</li>
-                </Link>
-                <Link to="/">
-                    <li className='menuItem'>logo</li>
-                </Link>
+                <li className='menuItem'>
+                    <Link to="/login">로그인</Link>
+                </li>
+                <li className='menuItem'>
+                    <Link to="/">logo</Link>
+                </li>
             </ul>
         )
     }

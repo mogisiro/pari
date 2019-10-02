@@ -1,12 +1,11 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import './app.css';
-import {Menu} from './menu.js'
-import {Sidebar} from './sidebar.js';
-import {MainPage} from './mainPage.js';
-import {MyPage} from './myPage.js';
-import SignIn from './signIn.js';
-import SignUp from './signUp.js';
+import {Menu} from './pages/menu.js';
+import Sidebar from './pages/sidebar.js';
+import {MainPage} from './pages/mainPage.js';
+import {MyPage} from './pages/myPage.js';
+import SignIn from './pages/signIn.js';
+import SignUp from './pages/signUp.js';
 
 export class App extends React.Component{
     render(){

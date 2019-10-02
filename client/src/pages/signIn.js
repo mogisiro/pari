@@ -11,7 +11,7 @@ import Container from '@material-ui/core/Container';
 import {Link as RouterLink} from 'react-router-dom';
 import './signIn&Up.css';
 import {useSelector, useDispatch} from 'react-redux';
-import {login} from './actions/isLogged.js';
+import {login} from '../actions/isLogged.js';
 
 const useStyles = makeStyles(theme => ({
   '@global': {
@@ -44,7 +44,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function SignIn() {
   const classes = useStyles();
-  const isLogged = useSelector(state => state.isLogged);
+  //const isLogged = useSelector(state => state.isLogged);
   const dispatch = useDispatch();
   return (
     <Container component="main" maxWidth="xs" id="loginTemplate">
@@ -86,6 +86,7 @@ export default function SignIn() {
             size="large"
             className={classes.button}
             style={{marginBottom: "5px"}}
+            onClick = {()=>dispatch(login())}
           >
             로그인
           </Button>

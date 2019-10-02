@@ -1,14 +1,17 @@
 import React from 'react';
 import './app.css';
 import {Link} from 'react-router-dom';
+import {useSelector} from 'react-redux';
 
-export class Sidebar extends React.Component {
-    render(){
+
+export default function Sidebar(){
+  const isLogged = useSelector(state => state.isLogged);
         return (
           <nav>
             <ul>
               <h4>
-                <Link to="/login">로그인&emsp;&emsp;&emsp;</Link>
+                {!isLogged && <Link to="/login">로그인&emsp;&emsp;&emsp;</Link>}
+                {isLogged && <Link to="/mypage">내 페이지&emsp;&emsp;</Link>}
                 <Link to="/">&emsp;&emsp;logo</Link>
               </h4>
               <h3>커뮤니티</h3>
@@ -28,5 +31,4 @@ export class Sidebar extends React.Component {
             </ul>
           </nav>
         );
-    }
-}
+        }
