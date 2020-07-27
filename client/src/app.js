@@ -1,11 +1,12 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import {Menu} from './pages/menu.js';
-import Sidebar from './pages/sidebar.js';
-import {MainPage} from './pages/mainPage.js';
-import {MyPage} from './pages/myPage.js';
-import SignIn from './pages/signIn.js';
-import SignUp from './pages/signUp.js';
+import {Menu} from './components/menu.js';
+import {MainPage} from './components/mainPage.js';
+import MyPage from './containers/Mypage.js';
+import Login from './containers/Login.js';
+import Register from './containers/Register.js';
+import Sidemenu from './containers/Sidemenu.js';
+import {FreeBoard} from './components/freeBoard.js';
 
 export class App extends React.Component{
     render(){
@@ -17,14 +18,15 @@ export class App extends React.Component{
                     </header>
                     <section className='content'>
                         <nav>
-                            <Sidebar/>
+                            <Sidemenu/>
                         </nav>
                         <main>
                             <Switch>
                                 <Route path="/" exact component={MainPage}/>
-                                <Route path="/login" component={SignIn}/>
-                                <Route path="/register" component={SignUp}/>
+                                <Route path="/login" component={Login}/>
+                                <Route path="/register" component={Register}/>
                                 <Route path="/mypage" component={MyPage}/>
+                                <Route path="/board" component={FreeBoard}/>
                             </Switch>
                         </main>
                     </section>

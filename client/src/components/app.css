@@ -10,7 +10,9 @@ html, body, main, section {
   height: 100%;
   width: 100%;
 }
-
+body {
+  background: #f8f8f8
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -41,6 +43,7 @@ ul {
   list-style: none;
 }
 
+
 @media (min-width: 800px){
   .upperbar, header{
       display: none;
@@ -55,43 +58,41 @@ ul {
 }
 
 @media (min-width: 800px) {
-  #latest, #popular, #qna{
-      border: 1px solid ghostwhite; 
-      background: ghostwhite;
-      color: dimgray;
-      padding-top: 20px;
-      padding-left: 20px;
-      border-radius: 5px;
-      font-weight: bold;
-      width: 350px;
-      box-shadow: 1px 1px 0.5px gainsboro;
+  td{
+    padding-left: 10px;
+    background: white;
+    border: 1;
+    line-height: 2.3;
   }
   
+  table{
+    border-radius: 5px;
+    border-color: rgba(105, 105, 105, 0.1);
+  }
+
   #latest{
       position: fixed;
-      top: 30px;
+      color: #333;
+      top: 20px;
       margin-left: 400px;
-      height: 650px;
   }
   
   #popular {
       position: fixed;
-      left: 800px;
-      top: 30px;
-      height: 200px;
+      left: 820px;
+      top: 20px;
   }
   
   #qna {
       position: fixed;
-      left: 800px;
-      top: 260px;
-      height: 200px;
+      margin-left: 400px;
+      top: 490px;
   }
   
   .majors {
       position: fixed;
-      left: 800px;
-      top: 490px;
+      left: 820px;
+      top: 510px;
       border-radius: 10px;
   }
   
@@ -100,7 +101,7 @@ ul {
       text-align: center;
       border: 1px solid lightcyan;
       background: lightcyan;
-      width: 182px;
+      width: 178px;
       height: 60px;
       position: relative;
       font-weight: bold;
@@ -109,7 +110,7 @@ ul {
   }
   
   #CE {
-      left: 190px;
+      left: 188px;
       bottom: 102px;
   }
   
@@ -119,7 +120,7 @@ ul {
   
   #BD {
       bottom: 199px;
-      left: 190px;
+      left: 188px;
   }
 }
 
@@ -131,17 +132,22 @@ ul {
       display: none;
   }
   #latest, #popular, #qna{
-      border: 1px solid ghostwhite; 
-      background: ghostwhite;
       color: dimgray;
-      padding-top: 20px;
       padding-left: 20px;
       border-radius: 5px;
-      font-weight: bold;
-      width: 90%;
-      margin: 3% 2.5%;
-      height: 220px;
-      box-shadow: 1px 1px 0.5px gainsboro;
+  }
+  td{
+    padding-left: 10px;
+    background: white;
+    border: 1;
+    line-height: 2.3;
+  }
+  
+  table{
+    border-radius: 5px;
+    width: 90%;
+    border-color: rgba(105, 105, 105, 0.1);
+    margin: 3% 2.5%;
   }
 }
 
@@ -198,3 +204,4 @@ header {
   opacity: 0.01;
   transition: opacity 100ms ease-in;
 }
+

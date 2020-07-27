@@ -5,7 +5,6 @@ import {SubmenuForInfo} from './submenu.js';
 import {SubmenuForMajors} from './submenu.js';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import {Link} from 'react-router-dom';
-import {useSelector} from 'react-redux';
 
 export class Menu extends React.Component {
     constructor(props){
