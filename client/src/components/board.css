@@ -1,0 +1,39 @@
+#freeboard{
+    background: white;
+    border: 1;
+    font-size: 14px;
+    padding-right: 10px;
+    border-color: rgba(105, 105, 105, 0.1);
+  }
+
+.board{
+    font-size: 14px;
+}
+
+#freeboard>td, .board>td{
+    line-height: 2.1
+}
+
+@media (min-width: 800px) {
+    .board {
+        margin-left: 400px;
+        margin-top: 100px;
+    }
+    table{
+        border-radius: 5px;
+        border-color: rgba(105, 105, 105, 0.1);
+      }
+}
+
+@media (max-width: 800px){
+    .board {
+        margin: 50px 50px;
+    }
+      
+      table{
+        border-radius: 5px;
+        width: 100%;
+        border-color: rgba(105, 105, 105, 0.1);
+        margin: 3% 2.5%;
+      }
+}

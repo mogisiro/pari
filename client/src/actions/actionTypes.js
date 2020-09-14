@@ -1,0 +1,16 @@
+/* AUTHENTICATION */
+// Register
+export const AUTH_REGISTER = "AUTH_REGISTER";
+export const AUTH_REGISTER_SUCCESS = "AUTH_REGISTER_SUCCESS";
+export const AUTH_REGISTER_FAILURE = "AUTH_REGISTER_FAILURE";
+// Login
+export const AUTH_LOGIN = "AUTH_LOGIN";
+export const AUTH_LOGIN_SUCCESS = "AUTH_LOGIN_SUCCESS";
+export const AUTH_LOGIN_FAILURE = "AUTH_LOGIN_FAILURE";
+export const AUTH_LOGIN_CLEAR = "AUTH_LOGIN_CLEAR";
+// Check sessions
+export const AUTH_GET_ALL = "AUTH_GET_ALL";
+export const AUTH_GET_ALL_SUCCESS = "AUTH_GET_ALL_SUCCESS";
+export const AUTH_GET_ALL_FAILURE = "AUTH_GET_ALL_FAILURE";
+// Logout
+export const AUTH_LOGOUT = "AUTH_LOGOUT";
